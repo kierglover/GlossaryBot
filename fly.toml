@@ -1,12 +1,12 @@
-# fly.toml app configuration file generated for data-to-policy-chatbot on 2023-04-24T20:00:57+07:00
+# fly.toml app configuration file generated for mad-ai-assistant on 2023-06-13T16:20:37+07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "data-to-policy-chatbot"
-primary_region = "sea"
+app = "mad-ai-assistant"
+primary_region = "sin"
 kill_signal = "SIGINT"
-kill_timeout = 5
+kill_timeout = "5s"
 
 [experimental]
   auto_rollback = true

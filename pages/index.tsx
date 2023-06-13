@@ -138,27 +138,39 @@ export default function Home() {
       </Head>
       <div className={styles.topnav}>
         <div>
-          <Link href="/"><h1 className={styles.navlogo}>Mäd AI Assistant</h1></Link>
+          <Link href="/"><img className={styles.navlogo} src='/MadLogoWhite.svg'></img></Link>
         </div>
-        {/* <div className = {styles.navlinks}>
-          <a
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          >
-            About
-          </a>
-          <a
-            href="https://mad.co"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contact Us
-          </a>
-        </div> */}
       </div>
       <main className={styles.main}>
-        <div className={styles.cloudLeft}></div>
+        <div className={styles.cloudLeft}>
+          <div className={styles.cloudLeftContent}>
+            <div className={styles.cloudLeftTitle}>
+              <p className={styles.paraEmoji}>🤔</p>
+              <p className={styles.paraStrong}>What is the Mäd AI assistant?</p>
+            </div>
+            <p className={styles.paraLight}>The Mäd chatbot leverages the power of OpenAI to understand your questions and provide responses based on our online library of over 175 insights.</p>
+          </div>
+          <div className={styles.cloudLeftContent}>
+            <div className={styles.cloudLeftTitle}>
+              <p className={styles.paraEmoji}>🤓</p>
+              <p className={styles.paraStrong}>How and why this matters</p>
+            </div>
+            <p className={styles.paraLight}>We combined all our insights into a dataset which can then be provided to the AI. Following this, we create a context for the AI so it knows how to interprit this data and respond effectively.</p>
+            <br></br>
+            <p className={styles.paraLight}>The Mäd AI assistant acts as both a unique way to interact with our insights, but also as a proof of concept that has already peaked the interest of some of our clients and partners such as the UNDP, financial and legal firms.</p>
+          </div>
+          <div className={styles.cloudLeftContent}>
+            <div className={styles.cloudLeftTitle}>
+              <p className={styles.paraEmoji}>💡</p>
+              <p className={styles.paraStrong}>Tips for writing better prompts</p>
+            </div>
+              <li className={styles.paraLight}>Use a thesaurus, finding the right word or phrasing can unlock what you're doing.</li>
+              <br></br>
+              <li className={styles.paraLight}>Pay attention to your verbs, make sure your prompt includes a verb that clearly expresses your intent.</li>
+              <br></br>
+              <li className={styles.paraLight}> Clarify your intent, introduce what you're trying to do clearly from the beginning, and play around with wording, tense, and approach.</li>
+          </div>
+        </div>
         <div className={styles.cloud}>
           <div ref={messageListRef} className={styles.messagelist}>
             {chatMessages.map((message, index) => {
@@ -166,7 +178,7 @@ export default function Home() {
               let className;
 
               if (message.type === "apiMessage") {
-                icon = <Image src="/chatIcon.png" alt="AI" width="30" height="30" className={styles.boticon} priority />;
+                icon = <Image src="/chatIcon.png" alt="AI" width="32" height="32" className={styles.boticon} priority />;
                 className = styles.apimessage;
               } else {
                 icon = <Image src="/usericon.png" alt="Me" width="30" height="30" className={styles.usericon} priority />
