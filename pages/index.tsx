@@ -138,7 +138,7 @@ export default function Home() {
       </Head>
       <div className={styles.topnav}>
         <div>
-          <Link href="/"><img className={styles.navlogo} src='/MadLogoWhite.svg'></img></Link>
+          <Link href="https://ai.mad.co"><Image src="/MadLogoWhite.svg" alt="logo" className={styles.navlogo} priority></Image></Link>
         </div>
       </div>
       <main className={styles.main}>
@@ -181,7 +181,7 @@ export default function Home() {
                 icon = <Image src="/chatIcon.png" alt="AI" width="32" height="32" className={styles.boticon} priority />;
                 className = styles.apimessage;
               } else {
-                icon = <Image src="/usericon.png" alt="Me" width="30" height="30" className={styles.usericon} priority />
+                icon = <Image src="/userIcon.png" alt="Me" width="30" height="30" className={styles.usericon} priority />
 
                 // The latest message sent by the user will be animated while waiting for a response
                 className = loading && index === chatMessages.length - 1
