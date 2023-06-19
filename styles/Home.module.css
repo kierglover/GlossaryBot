@@ -1,12 +1,12 @@
 .paraStrong {
   color: #CCCCCC;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .paraLight {
   color: #6F6F6F;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .paraEmoji {
@@ -19,7 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
 }
 
 .header {
@@ -33,7 +33,7 @@
 .topnav {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 25px;
   align-items: center;
 }
 
@@ -47,7 +47,7 @@
 .navlogo {
   align-self: center;
   /* height: 00px; */
-  width: 125px;
+  /* width: 125px; */
   /* font-size: 1.25rem;
   margin-left: 1rem; */
 }
@@ -94,10 +94,23 @@
   font-size: 16px;
   padding: 8px 16px;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 4px;
   border: 1px solid #4F4F4F;
   color: #CCCCCC;
   background-color: transparent;
+}
+
+.textarea:focus {
+  outline: none;
+  border: 1px solid;
+  border-radius: 16px;
+  border-color: #1F125D;
+}
+
+.textarea:active {
+  border: 1px solid;
+  border-radius: 16px;
+  border-color: #1F125D;
 }
 
 .textarea:disabled {
@@ -110,7 +123,7 @@
 
 .generatebutton {
   position: absolute;
-  top: 10px;
+  top: 8px;
   right:16px;
   color: rgb(165, 162, 162);
   background: none;
@@ -149,7 +162,6 @@
   justify-content: flex-end;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
 }
 
 .messagelistloading {
@@ -193,7 +205,7 @@
   justify-content: flex-start;
   width: 100%;
   animation: fadein 0.5s;
-  margin: 16px 0rem;
+  padding: 18px 0rem;
 }
 
 .chatMessageWrap:nth-child(odd) {
@@ -294,7 +306,7 @@
 }
 
 .cloudLeftContent {
-  margin: 40px 0px;
+  margin: 20px 0px;
 }
 
 .cloud {
@@ -307,6 +319,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 18px;
+  overflow-y: scroll;
 }
 
 .pointsnormal {
